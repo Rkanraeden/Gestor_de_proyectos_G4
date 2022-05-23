@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  # get 'pages/create'
-  # get 'pages/index'
-  # get 'pages/board'
-  resources :pages
+  get 'pages/create'
+  get 'pages/index'
+  get 'pages/board'
+  # resources :pages
   root 'pages#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

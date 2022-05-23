@@ -1,2 +1,39 @@
-<h1>Pages#board</h1>
-<p>Find me in app/views/pages/board.html.erb</p>
+<h2>Listado de tareas</h2>
+
+<div class ="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Inicio</th>
+                <th scope="col">Término</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+          <%=@task.each do |task| %>
+            <tr>
+                <th scope="row"><%= task.id %></th>
+                <td><%= task.name %></td>
+                <td><%= task.description %></td> 
+                <td><%= task.start_date %></td> 
+                <td><%= task.finish_date %></td>
+                <td><%= task.status %></td>
+                <td>
+                    <% if task.status == 1%>
+                        Propuesta
+                    <% elsif task.status == 2%>
+                        En Progreso
+                    <% else %>
+                        Terminado
+                    <% end %>
+                </td>
+            <%= end %>                
+            </tr>
+        </tbody>
+    </table>
+</div>
+

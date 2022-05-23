@@ -1,2 +1,36 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h2>Crear Tarea</h2>
+<form method="get" action="pages/create" class ="container">
+    <div class="container">
+        <div class ="col" class="mb-3">
+            <label for="name" class="form-label">Nombre Tarea</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group" class ="mb-3">
+            <label for="exampleFormControlTextarea1">Descripcion</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+        </div>
+        <div class = "row" class="mb-3">
+            <div>
+                <label for="name" class="form-label">Fecha Inicio</label>
+                <input type="date" class="form-control" name="start_date">
+            </div>
+            &nbsp;
+            <div>
+                <label for="name" class="form-label">Fecha Término</label>
+                <input type="date" class="form-control" name="finish_date">
+            </div>
+            &nbsp;
+            <div class ="form-select" class="mb-3">
+                <label for="name" class="form-label">Estado</label>
+                <select class="custom-select" class = container>
+                    <option selected value ="1">Propuesta</option>
+                    <option value="2">En Progreso</option>
+                    <option value="3">Terminada</option>
+                </select>
+            </div>
+        </div>   
+        <br>            
+        <input class="btn btn-primary" class = mb-3 type="submit" value="Crear">
+           
+    </div>
+</form>

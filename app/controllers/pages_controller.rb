@@ -1,19 +1,20 @@
 class PagesController < ApplicationController
   def index 
-    # @project = Project.all.order('created_at DESC')
+    
   end
   
   
   def create
-    @project = Project.create(name: params[:name], description: params[:description], start_date: params[:start_date], end_date: params[:end_date], status: params[:status]) 
+    @task = Task.create(name: params[:name], description: params[:description], start_date: params[:start_date], finish_date: params[:finish_date], status: params[:status])
   end
 
   
 
   def board
-    if params[:status].exist?
-      @project = Project.where('status = ?', params[:status])
+    if params[:status].present?
+      @tasks = Task.where('state = ?'), params[:state]
     else
-      @project = Project.all
+      @tasks = Task.all
   end
+  
 end
