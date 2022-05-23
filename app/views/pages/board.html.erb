@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <%=@task.each do |task| %>
+            <% @task.each do |task| %>
                 <tr>
                     <th scope="row"><%= task.id %></th>
                     <td><%= task.name %></td>
@@ -31,9 +31,8 @@
                             Terminado
                         <% end %>
                     </td>
-                    
                 </tr>
-            <%= end %> 
+            <% end %> 
         </tbody>
     </table>
 </div>

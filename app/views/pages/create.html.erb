@@ -1,2 +1,10 @@
-<h1>Pages#create</h1>
-<p>Find me in app/views/pages/create.html.erb</p>
+ 
+ <% if @task.success.any?
+    <div> 
+        <h2>¿Tarea Creada!</h1>
+        <p>Ha iniciado una nueva tarea</p>
+        <p>Para acceder a sus actividades click aquí <%= link_to "board", pages_board_path %></p>
+        
+    </div>
+<%= else %>
+    

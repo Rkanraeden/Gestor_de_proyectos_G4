@@ -15,6 +15,7 @@ class PagesController < ApplicationController
       @tasks = Task.where('state = ?'), params[:state]
     else
       @tasks = Task.all
+    end
   end
   
 end
