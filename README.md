@@ -1,4 +1,8 @@
 # README
+Este proyecto está en construccion, falta terminar una vista y existe un problema con el acceso al dashboard
+Se respalda esta etapa.
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
